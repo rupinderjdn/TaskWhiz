@@ -24,7 +24,8 @@ app.post('/putInList',(req,res)=>{
     const {taskname,username,labels,dueDate} = payloadObject;
 
     const callBack = (id)=>{
-        res.send(id);
+        console.log(id);
+        res.send(`${id}`);
     }
 
     addToTasks(username,taskname,labels,dueDate,callBack);
